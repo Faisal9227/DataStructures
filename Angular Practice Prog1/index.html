@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html ng-app='popsugar'>
+    <head>
+        <title>Musical Chairs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"></link>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="Chairs.js"></script>
+
+    </head>
+<!--<body ng-app='popsugar'>-->
+    <body ng-controller="popsugarctrl">
+  <!--<div ng-controller="Controller">-->
+
+    <div class="container">
+      <div class="field" ng-repeat="chair in chaircircle">{{chair.index}}</div>
+    </div>
+    <div>Enter total number of Chairs (if empty total chairs considered are 100)</div><input class="textin" type="text" ng-model="chairs">
+    <button ng-click="removechairs()" ng-disabled="startButton">Start</button>
+    <p ng-show="Winner">{{ chaircircle[0].index }}</p>
+ <!-- </div>-->
+ 
+</body>
+
+</html>
